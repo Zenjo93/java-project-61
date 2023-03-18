@@ -3,8 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static int turnsCount = 3;
+    private static int turnsCount = 3;
     private static String playerName;
+
+    public static int getTurnsCount() {
+        return turnsCount;
+    }
 
     public static void startGame(String gameRule, String[] questions, String[] rightAnswers) {
         Scanner scanner = new Scanner(System.in);

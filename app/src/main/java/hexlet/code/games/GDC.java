@@ -5,12 +5,12 @@ import hexlet.code.UtilsRandom;
 
 public class GDC {
     static String gameRule = "Find the greatest common divisor of given numbers.";
-    static String[] questions = new String[Engine.turnsCount];
-    static String[] rightAnswers = new String[Engine.turnsCount];
+    static String[] questions = new String[Engine.getTurnsCount()];
+    static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
 
     private static void setGameData() {
-        for (var i = 0; i < Engine.turnsCount; i += 1) {
+        for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
             int num1 = UtilsRandom.getRandomNumber(100);
             int num2 = UtilsRandom.getRandomNumber(100);
             var gdc = findGcd(num1, num2);

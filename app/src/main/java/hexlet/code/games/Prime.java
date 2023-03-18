@@ -5,12 +5,12 @@ import hexlet.code.UtilsRandom;
 
 public class Prime {
     static String gameRule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    static String[] questions = new String[Engine.turnsCount];
-    static String[] rightAnswers = new String[Engine.turnsCount];
+    static String[] questions = new String[Engine.getTurnsCount()];
+    static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
 
     private static void setGameData() {
-        for (var i = 0; i < Engine.turnsCount; i += 1) {
+        for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
             int num = UtilsRandom.getRandomNumber(2, 500);
             questions[i] = Integer.toString(num);
             rightAnswers[i] = isPrime(num) ? "yes" : "no";

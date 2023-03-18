@@ -6,11 +6,11 @@ import hexlet.code.Engine;
 public class CalcGame {
     static String gameRule = "What is the result of the expression?";
     static String[] operators = {"+", "-", "*"};
-    static String[] questions = new String[Engine.turnsCount];
-    static String[] rightAnswers = new String[Engine.turnsCount];
+    static String[] questions = new String[Engine.getTurnsCount()];
+    static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
     private static void setGameData() {
-        for (var i = 0; i < Engine.turnsCount; i += 1) {
+        for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
             var num1 = UtilsRandom.getRandomNumber(100);
             var num2 = UtilsRandom.getRandomNumber(100);
             var operator = operators[UtilsRandom.getRandomNumber(operators.length)];
