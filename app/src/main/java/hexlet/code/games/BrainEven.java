@@ -4,9 +4,10 @@ import hexlet.code.Engine;
 import hexlet.code.UtilsRandom;
 
 public class BrainEven {
-    static private String gameRule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    static private String[] questions = new String[Engine.getTurnsCount()];
-    static private String[] rightAnswers = new String[Engine.getTurnsCount()];
+    private static final String gameRule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int maxLimitRandomNumber = 100;
+    private static String[] questions = new String[Engine.getTurnsCount()];
+    private static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
     public static String getGameRule() {
         return gameRule;
@@ -22,7 +23,7 @@ public class BrainEven {
 
     private static void setGameData() {
         for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
-            var question = UtilsRandom.getRandomNumber(100);
+            var question = UtilsRandom.getRandomNumber(maxLimitRandomNumber);
             questions[i] = Integer.toString(question);
             rightAnswers[i] = isEven(question);
         }
