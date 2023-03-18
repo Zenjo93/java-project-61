@@ -11,8 +11,8 @@ public class GDC {
 
     private static void setGameData() {
         for (var i = 0; i < Engine.turnsCount; i += 1) {
-            var num1 = UtilsRandom.getRandomNumber(100);
-            var num2 = UtilsRandom.getRandomNumber(100);
+            int num1 = UtilsRandom.getRandomNumber(100);
+            int num2 = UtilsRandom.getRandomNumber(100);
             var gdc = findGcd(num1, num2);
 
             questions[i] = Integer.toString(num1) + " " + Integer.toString(num2);

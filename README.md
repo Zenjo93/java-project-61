@@ -28,3 +28,14 @@ Find the greatest common divisor of given numbers.
 
 ![img.png](img.png)
 </details>
+
+##### #4 Prime Game
+
+What number is missing in the progression?
+
+<details>
+<summary>Example:</summary>
+
+![img_1.png](img_1.png)
+</details>
+
