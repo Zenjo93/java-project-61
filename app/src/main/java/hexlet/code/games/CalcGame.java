@@ -51,7 +51,7 @@ public class CalcGame {
 
     public static void start() {
         setGameData();
-        Engine.startGame(getGameRule(), questions, rightAnswers);
+        Engine.startGame(GAME_RULE, questions, rightAnswers);
     }
 
 }

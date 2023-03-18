@@ -4,15 +4,27 @@ import hexlet.code.Engine;
 import hexlet.code.UtilsRandom;
 
 public class GDC {
-    static String gameRule = "Find the greatest common divisor of given numbers.";
-    static String[] questions = new String[Engine.getTurnsCount()];
-    static String[] rightAnswers = new String[Engine.getTurnsCount()];
+    private static final String GAME_RULE = "Find the greatest common divisor of given numbers.";
+    private static final int MAX_LIMIT = 100;
+    private static String[] questions = new String[Engine.getTurnsCount()];
+    private static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
+    public static String getGameRule() {
+        return GAME_RULE;
+    }
+
+    public static String[] getQuestions() {
+        return questions;
+    }
+
+    public static String[] getRightAnswers() {
+        return rightAnswers;
+    }
 
     private static void setGameData() {
         for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
-            int num1 = UtilsRandom.getRandomNumber(100);
-            int num2 = UtilsRandom.getRandomNumber(100);
+            int num1 = UtilsRandom.getRandomNumber(MAX_LIMIT);
+            int num2 = UtilsRandom.getRandomNumber(MAX_LIMIT);
             var gdc = findGcd(num1, num2);
 
             questions[i] = Integer.toString(num1) + " " + Integer.toString(num2);
@@ -33,6 +45,6 @@ public class GDC {
 
     public static void start() {
         setGameData();
-        Engine.startGame(gameRule, questions, rightAnswers);
+        Engine.startGame(GAME_RULE, questions, rightAnswers);
     }
 }

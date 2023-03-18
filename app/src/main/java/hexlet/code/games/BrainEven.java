@@ -35,7 +35,7 @@ public class BrainEven {
 
     public static void start() {
         setGameData();
-        Engine.startGame(getGameRule(), getQuestions(), getRightAnswers());
+        Engine.startGame(GAME_RULE, questions, rightAnswers);
     }
 }
 
