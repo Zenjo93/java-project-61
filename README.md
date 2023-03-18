@@ -29,7 +29,7 @@ Find the greatest common divisor of given numbers.
 ![img.png](img.png)
 </details>
 
-##### #4 Prime Game
+##### #4 Progression Game
 
 What number is missing in the progression?
 
@@ -37,5 +37,15 @@ What number is missing in the progression?
 <summary>Example:</summary>
 
 ![img_1.png](img_1.png)
+</details>
+
+##### #5 Prime Game
+
+Answer 'yes' if given number is prime. Otherwise answer 'no'.
+
+<details>
+<summary>Example:</summary>
+
+![img_2.png](img_2.png)
 </details>
 

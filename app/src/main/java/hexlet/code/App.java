@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.BrainEven;
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.GDC;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -18,6 +15,7 @@ public class App {
                         3 - Calc
                         4 - GCD
                         5 - Progression
+                        6 - Prime
                         0 - Exit"""
         );
 
@@ -38,6 +36,9 @@ public class App {
 
             case "5":
                 Progression.start();
+
+            case "6":
+                Prime.start();
 
             case "0":
                 break;
