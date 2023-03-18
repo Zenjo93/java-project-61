@@ -23,5 +23,8 @@ What is the result of the expression?
 
 Find the greatest common divisor of given numbers.
 
-Example:
+<details>
+<summary>Example:</summary>
+
 ![img.png](img.png)
+</details>
