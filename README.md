@@ -18,3 +18,10 @@ My first Java project from Hexlet.io. Learned java basics on practice by develop
 What is the result of the expression?
 
 [Example](https://asciinema.org/a/SHeqJdjm51gje5umxG3zCMYve)
+
+##### #3 GCD Game
+
+Find the greatest common divisor of given numbers.
+
+Example:
+![img.png](img.png)

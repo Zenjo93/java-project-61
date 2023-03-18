@@ -1,6 +1,8 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.BrainEven;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.GDC;
 
 import java.util.Scanner;
 
@@ -13,6 +15,7 @@ public class App {
                         1 - Greet
                         2 - Even
                         3 - Calc
+                        4 - GCD
                         0 - Exit"""
         );
 
@@ -28,8 +31,12 @@ public class App {
             case "3":
                 CalcGame.start();
                 break;
-//            case "0":
-//                break;
+            case "4":
+                GDC.start();
+
+            case "0":
+                break;
+
             default:
                 break;
 
