@@ -40,9 +40,6 @@ public class App {
             case "6":
                 Prime.start();
 
-            case "0":
-                break;
-
             default:
                 break;
 
