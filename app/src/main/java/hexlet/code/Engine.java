@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static int turnsCount = 3;
+    private static final int turnsCount = 3;
     private static String playerName;
 
     public static int getTurnsCount() {
