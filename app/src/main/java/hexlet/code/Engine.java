@@ -3,11 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int turnsCount = 3;
+    private static final int TURNS_COUNT = 3;
     private static String playerName;
 
     public static int getTurnsCount() {
-        return turnsCount;
+        return TURNS_COUNT;
     }
 
     public static void startGame(String gameRule, String[] questions, String[] rightAnswers) {
@@ -16,7 +16,7 @@ public class Engine {
 
         System.out.println(gameRule);
 
-        for (var i = 0; i < turnsCount; i += 1) {
+        for (var i = 0; i < TURNS_COUNT; i += 1) {
             var question = questions[i];
             var rightAnswer = rightAnswers[i];
 

@@ -4,16 +4,33 @@ import hexlet.code.UtilsRandom;
 import hexlet.code.Engine;
 
 public class CalcGame {
-    static String gameRule = "What is the result of the expression?";
-    static String[] operators = {"+", "-", "*"};
-    static String[] questions = new String[Engine.getTurnsCount()];
-    static String[] rightAnswers = new String[Engine.getTurnsCount()];
+    private static final String GAME_RULE = "What is the result of the expression?";
+    private static final String[] OPERATORS = {"+", "-", "*"};
+    private static final int MAX_LIMIT = 100;
+    private static String[] questions = new String[Engine.getTurnsCount()];
+    private static String[] rightAnswers = new String[Engine.getTurnsCount()];
+
+    public static String getGameRule() {
+        return GAME_RULE;
+    }
+
+    public static String[] getOperators() {
+        return OPERATORS;
+    }
+
+    public static String[] getQuestions() {
+        return questions;
+    }
+
+    public static String[] getRightAnswers() {
+        return rightAnswers;
+    }
 
     private static void setGameData() {
         for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
-            var num1 = UtilsRandom.getRandomNumber(100);
-            var num2 = UtilsRandom.getRandomNumber(100);
-            var operator = operators[UtilsRandom.getRandomNumber(operators.length)];
+            var num1 = UtilsRandom.getRandomNumber(MAX_LIMIT);
+            var num2 = UtilsRandom.getRandomNumber(MAX_LIMIT);
+            var operator = OPERATORS[UtilsRandom.getRandomNumber(OPERATORS.length)];
             questions[i] = num1 + " " + operator + " " + num2;
 
             switch (operator) {
@@ -34,7 +51,7 @@ public class CalcGame {
 
     public static void start() {
         setGameData();
-        Engine.startGame(gameRule, questions, rightAnswers);
+        Engine.startGame(getGameRule(), questions, rightAnswers);
     }
 
 }
