@@ -25,7 +25,7 @@ public class Progression {
 
             rightAnswers[i] = progression[blankPosition];
             progression[blankPosition] = "..";
-            questions[i] = Arrays.toString(progression);
+            questions[i] = String.join(" ",progression);
         }
 
     }
