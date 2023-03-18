@@ -33,13 +33,13 @@ public class App {
                 break;
             case "4":
                 GDC.start();
-
+                break;
             case "5":
                 Progression.start();
-
+                break;
             case "6":
                 Prime.start();
-
+                break;
             default:
                 break;
 
