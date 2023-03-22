@@ -10,7 +10,6 @@ public class Progression {
     private static final int MIN_LIMIT = 1;
 
     private static String[][] getGameData() {
-        String[] progression = new String[PROGRESSION_LENGTH];
         String[] questions = new String[Engine.TURNS_COUNT];
         String[] rightAnswers = new String[Engine.TURNS_COUNT];
 
@@ -18,16 +17,21 @@ public class Progression {
             int startNumber = UtilsRandom.getRandomNumber(MIN_LIMIT, MAX_LIMIT);
             int step = UtilsRandom.getRandomNumber(MIN_LIMIT, MAX_LIMIT);
             int blankPosition = UtilsRandom.getRandomNumber(0, PROGRESSION_LENGTH - 1);
-
-            for (int j = 0, num = startNumber; j < PROGRESSION_LENGTH; num += step, j += 1) {
-                progression[j] = Integer.toString(num);
-            }
+            String[] progression = makeProgression(startNumber, step, PROGRESSION_LENGTH);
 
             rightAnswers[i] = progression[blankPosition];
             progression[blankPosition] = "..";
             questions[i] = String.join(" ", progression);
         }
         return new String[][]{questions, rightAnswers};
+    }
+
+    private static String[] makeProgression(int startNumber, int step, int progressionLength) {
+        String[] progression = new String[progressionLength];
+        for (int i = 0, num = startNumber; i < progressionLength; num += step, i += 1) {
+            progression[i] = Integer.toString(num);
+        }
+        return progression;
     }
 
     public static void start() {
