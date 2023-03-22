@@ -27,7 +27,7 @@ public class Prime {
         }
 
         for (int i = 2; i <= num; i += 1) {
-            if ((int) Math.sqrt(num) % i == 0) {
+            if (((int) Math.sqrt(num)) % i == 0) {
                 return false;
             }
         }
