@@ -6,27 +6,18 @@ import hexlet.code.UtilsRandom;
 public class BrainEven {
     private static final String GAME_RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final int MAX_LIMIT = 100;
-    private static String[] questions = new String[Engine.getTurnsCount()];
-    private static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
-    public static String getGameRule() {
-        return GAME_RULE;
-    }
+    private static String[][] getGameData() {
+        String[] questions = new String[Engine.TURNS_COUNT];
+        String[] rightAnswers = new String[Engine.TURNS_COUNT];
 
-    public static String[] getQuestions() {
-        return questions;
-    }
-
-    public static String[] getRightAnswers() {
-        return rightAnswers;
-    }
-
-    private static void setGameData() {
-        for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
+        for (var i = 0; i < Engine.TURNS_COUNT; i += 1) {
             var question = UtilsRandom.getRandomNumber(MAX_LIMIT);
             questions[i] = Integer.toString(question);
             rightAnswers[i] = isEven(question);
         }
+
+        return new String[][]{questions, rightAnswers};
     }
 
     private static String isEven(int num) {
@@ -34,8 +25,11 @@ public class BrainEven {
     }
 
     public static void start() {
-        setGameData();
-        Engine.startGame(GAME_RULE, questions, rightAnswers);
+        String[][] gameData = getGameData();
+        Engine.startGame(GAME_RULE, gameData);
+
     }
 }
+
+// Engine.startGame(GAME_RULE, questions, rightAnswers);
 

@@ -8,29 +8,13 @@ public class Progression {
     private static final int PROGRESSION_LENGTH = 10;
     private static final int MAX_LIMIT = 5;
     private static final int MIN_LIMIT = 1;
-    private static String[] questions = new String[Engine.getTurnsCount()];
-    private static String[] rightAnswers = new String[Engine.getTurnsCount()];
 
-    public static String getGameRule() {
-        return GAME_RULE;
-    }
-
-    public static String[] getQuestions() {
-        return questions;
-    }
-
-    public static String[] getRightAnswers() {
-        return rightAnswers;
-    }
-
-    public static int getProgressionLength() {
-        return PROGRESSION_LENGTH;
-    }
-
-    private static void setGameData() {
+    private static String[][] getGameData() {
         String[] progression = new String[PROGRESSION_LENGTH];
+        String[] questions = new String[Engine.TURNS_COUNT];
+        String[] rightAnswers = new String[Engine.TURNS_COUNT];
 
-        for (var i = 0; i < Engine.getTurnsCount(); i += 1) {
+        for (var i = 0; i < Engine.TURNS_COUNT; i += 1) {
             int startNumber = UtilsRandom.getRandomNumber(MIN_LIMIT, MAX_LIMIT);
             int step = UtilsRandom.getRandomNumber(MIN_LIMIT, MAX_LIMIT);
             int blankPosition = UtilsRandom.getRandomNumber(0, PROGRESSION_LENGTH - 1);
@@ -43,11 +27,12 @@ public class Progression {
             progression[blankPosition] = "..";
             questions[i] = String.join(" ", progression);
         }
+        return new String[][]{questions, rightAnswers};
     }
 
     public static void start() {
-        setGameData();
-        Engine.startGame(GAME_RULE, questions, rightAnswers);
+        String[][] gameData = getGameData();
+        Engine.startGame(GAME_RULE, gameData);
     }
 
 }

@@ -3,14 +3,14 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int TURNS_COUNT = 3;
+    public static final int TURNS_COUNT = 3;
     private static String playerName;
 
-    public static int getTurnsCount() {
-        return TURNS_COUNT;
-    }
+    public static void startGame(String gameRule, String[][] gameData) {
+        // public static void startGame(String gameRule, String[] questions, String[] rightAnswers) {
+        String[] questions = gameData[0];
+        String[] rightAnswers = gameData[1];
 
-    public static void startGame(String gameRule, String[] questions, String[] rightAnswers) {
         Scanner scanner = new Scanner(System.in);
         greet(scanner);
 
