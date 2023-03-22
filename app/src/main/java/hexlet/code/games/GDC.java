@@ -16,7 +16,7 @@ public class GDC {
             int num2 = UtilsRandom.getRandomNumber(MAX_LIMIT);
             var gdc = findGcd(num1, num2);
 
-            questions[i] = Integer.toString(num1) + " " + Integer.toString(num2);
+            questions[i] = num1 + " " + num2;
             rightAnswers[i] = Integer.toString(gdc);
         }
         return new String[][]{questions, rightAnswers};
