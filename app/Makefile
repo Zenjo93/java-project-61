@@ -1,7 +1,7 @@
 run-dist:
 	./build/install/app/bin/app
 
-build:
+run-build:
 	gradle clean && gradle installDist
 
 checkstyle:
