@@ -22,8 +22,12 @@ public class Prime {
     }
 
     private static boolean isPrime(int num) {
-        for (int i = 2, sqrtNum = (int) Math.sqrt(num); i <= sqrtNum; i += 1) {
-            if (num % i == 0) {
+        if (num < 2) {
+            return false;
+        }
+
+        for (int i = 2; i <= num; i += 1) {
+            if ((int) Math.sqrt(num) % i == 0) {
                 return false;
             }
         }
