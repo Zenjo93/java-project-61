@@ -14,14 +14,14 @@ public class BrainEven {
         for (var i = 0; i < Engine.TURNS_COUNT; i += 1) {
             var question = UtilsRandom.getRandomNumber(MAX_LIMIT);
             questions[i] = Integer.toString(question);
-            rightAnswers[i] = isEven(question);
+            rightAnswers[i] = isEven(question) ? "yes" : "no";
         }
 
         return new String[][]{questions, rightAnswers};
     }
 
-    private static String isEven(int num) {
-        return num % 2 == 0 ? "yes" : "no";
+    private static boolean isEven(int num) {
+        return num % 2 == 0;
     }
 
     public static void start() {
