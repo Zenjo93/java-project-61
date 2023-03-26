@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.BrainEven;
+import hexlet.code.games.Even;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.GDC;
 import hexlet.code.games.Prime;
@@ -30,7 +30,7 @@ public class App {
                 Cli.greet();
                 break;
             case "2":
-                BrainEven.start();
+                Even.start();
                 break;
             case "3":
                 CalcGame.start();

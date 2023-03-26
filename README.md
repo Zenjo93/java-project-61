@@ -5,6 +5,10 @@
 # Hexlet Project #1: "Brain Games"
 My first Java project from Hexlet.io. Learned java basics on practice by developing 5 brainteaser games for Command Line interface (cli).
 
+## How to install
+For installing: clone repo to your computer and run following command in terminal ```make run-install``` from ```/app``` directory.
+For running game type ```make run-dist```.
+
 ## Games description
 
 ##### #1 Brain Even Game

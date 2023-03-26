@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.UtilsRandom;
 
-public class BrainEven {
+public class Even {
     private static final String GAME_RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final int MAX_LIMIT = 100;
 
@@ -30,6 +30,3 @@ public class BrainEven {
 
     }
 }
-
-// Engine.startGame(GAME_RULE, questions, rightAnswers);
-

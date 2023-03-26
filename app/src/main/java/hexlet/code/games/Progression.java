@@ -28,7 +28,8 @@ public class Progression {
 
     private static String[] makeProgression(int startNumber, int step, int progressionLength) {
         String[] progression = new String[progressionLength];
-        for (int i = 0, num = startNumber; i < progressionLength; num += step, i += 1) {
+        for (int i = 0, num; i < progressionLength; i += 1) {
+            num = startNumber + i * step;
             progression[i] = Integer.toString(num);
         }
         return progression;
