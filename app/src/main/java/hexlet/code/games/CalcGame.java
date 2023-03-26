@@ -17,25 +17,23 @@ public class CalcGame {
             var num2 = UtilsRandom.getRandomNumber(MAX_LIMIT);
             var operator = OPERATORS[UtilsRandom.getRandomNumber(OPERATORS.length)];
             questions[i] = num1 + " " + operator + " " + num2;
-            rightAnswers[i] = getAnswer(num1, num2, operator);
+            rightAnswers[i] = Integer.toString(calculate(num1, num2, operator));
         }
         return new String[][]{questions, rightAnswers};
     }
 
-    private static String getAnswer(int num1, int num2, String operator) {
+    private static int calculate(int num1, int num2, String operator) {
         switch (operator) {
             case "+" -> {
-                return Integer.toString(num1 + num2);
+                return num1 + num2;
             }
             case "-" -> {
-                return Integer.toString(num1 - num2);
+                return num1 - num2;
             }
             case "*" -> {
-                return Integer.toString(num1 * num2);
+                return num1 * num2;
             }
-            default -> {
-                return "";
-            }
+            default -> throw new IllegalArgumentException("Operator must be '*', '-' or '+'");
         }
     }
 
