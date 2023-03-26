@@ -23,14 +23,10 @@ public class GDC {
     }
 
     private static int findGcd(int a, int b) {
-        int gcd = 1;
-
-        for (int i = 1; i <= a && i <= b; ++i) {
-            if (a % i == 0 && b % i == 0) {
-                gcd = i;
-            }
+        if (b == 0) {
+            return a;
         }
-        return gcd;
+        return findGcd(b, a % b);
     }
 
     public static void start() {
